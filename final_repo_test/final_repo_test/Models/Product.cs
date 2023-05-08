@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace final_repo_test.Models
 {
-    public class Product
+    public partial class Product
     {
         [Key]
         public int P_ID { get; set; } = default!;
@@ -19,6 +19,6 @@ namespace final_repo_test.Models
         public bool P_Discontinuted { get; set; } = default!;
 
         public ICollection<OrderDetail>? OrderDetails { get; set; }
-        public ICollection<Account>? Accounts { get; set; }
+        public ICollection<UserAccount>? Accounts { get; set; }
     }
 }
